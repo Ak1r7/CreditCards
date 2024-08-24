@@ -1,0 +1,69 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.card {
+    width: 350px;
+    height: 220px;
+    border-radius: 15px;
+    padding: 20px;
+    background-image: url('../img/card-background.jpg'); 
+    background-size: cover;
+    color: white;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.chip {
+    width: 50px; 
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 8px; 
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.card-item__typeImg {
+    width: 60px;
+    height: auto;
+}
+
+.number {
+    margin-top: 80px;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.card-holder,
+.expires {
+    margin-top: 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    font-weight: bold;
+    font-size: 12px;
+    color: #cccccc;
+}
+
+.card-holder div,
+.expires div {
+    font-size: 16px;
+    margin-top: 5px;
+}

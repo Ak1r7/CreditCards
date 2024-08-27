@@ -1,171 +1,301 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
-*{
-    font-family: 'Poppins', sans-serif;
-    margin:0; padding:0;
-    box-sizing: border-box;
-    outline: none; border: none;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.container{
-    min-height: 100vh;
-    background: #eee;
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: #e0e8f9;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-flow: column;
-    padding-bottom: 60px;
-}
-
-.container form{
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    align-items: center;
+    height: 100vh;
+    margin: 0;
     padding: 20px;
-    width: 600px;
-    padding-top: 160px;
 }
 
-.container form .inputBox{
-    margin-top: 20px;
+
+
+.chip {
+    max-height: 50px;
 }
 
-.container form .inputBox span{
-    display: block;
-    color:#999;
-    padding-bottom: 5px;
-}
-
-.container form .inputBox input,
-.container form .inputBox select{
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border:1px solid rgba(0,0,0,.3);
-    color:#444;
-}
-
-.container form .flexbox{
+.card-form {
     display: flex;
-    gap:15px;
+    justify-content: center;
+    align-items: center;
 }
 
-.container form .flexbox .inputBox{
-    flex:1 1 150px;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    padding-top: 150px;
 }
 
-.container form .submit-btn{
-    width: 100%;
-    background-color: blue;
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 20px;
-    color:#fff;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .2s linear;
-}
-
-.container form .submit-btn:hover{
-    letter-spacing: 2px;
-    opacity: .8;
-}
-
-.container .card-container{
-    margin-bottom: -150px;
-    position: relative;
-    height: 250px;
+.card-display {
     width: 400px;
+    margin-bottom: 20px;
+    text-align: start;
 }
 
-.container .card-container .front{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0; left: 0;
+.card {
+    margin-bottom: -240px;
+    bottom: 440px;
+    width: 360px;
+    height: 200px;
     background-image: url('../img/card-background.jpg');
-    border-radius: 5px;
-    backface-visibility: hidden;
-    box-shadow: 0 15px 25px rgba(0,0,0,.2);
-    padding:20px;
-    transform:perspective(1000px) rotateY(0deg);
-    transition:transform .4s ease-out;
-}
-
-.container .card-container .front .image{
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    color: white;
+    padding: 20px;
     display: flex;
-    align-items:center;
+    flex-direction: column;
     justify-content: space-between;
-    padding-top: 10px;
-}
-
-.container .card-container .front .image img{
-    height: 50px;
-}
-
-.container .card-container .front .card-number-box{
-    padding:30px 0;
-    font-size: 22px;
-    color:#fff;
-}
-
-.container .card-container .front .flexbox{
-    display: flex;
-}
-
-.container .card-container .front .flexbox .box:nth-child(1){
-    margin-right: auto;
-}
-
-.container .card-container .front .flexbox .box{
-    font-size: 15px;
-    color:#fff;
-}
-
-.container .card-container .back{
-    position: absolute;
-    top:0; left: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url('../img/card-background.jpg');
-    border-radius: 5px;
-    padding: 20px 0;
-    text-align: right;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
     backface-visibility: hidden;
-    box-shadow: 0 15px 25px rgba(0,0,0,.2);
-    transform:perspective(1000px) rotateY(180deg);
-    transition:transform .4s ease-out;
 }
 
-.container .card-container .back .stripe{
-    background: #000;
-    width: 100%;
-    margin: 10px 0;
+.cardBack {
+    margin-bottom: -130px;
+    bottom: 440px;
+    width: 360px;
+    height: 200px;
+    background-image: url('../img/card-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+#black-line {
+    position: absolute;
     height: 50px;
+    width: 100%;
+    background-color: black;
+    left: 0px;
 }
 
-.container .card-container .back .box{
-    padding: 0 20px;
+#cvv {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
 }
 
-.container .card-container .back .box span{
-    color:#fff;
+#cvv>h2 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
     font-size: 15px;
-}
-
-.container .card-container .back .box .cvv-box{
-    height: 50px;
-    padding: 10px;
-    margin-top: 5px;
-    color:#333;
-    background: #fff;
-    border-radius: 5px;
+    color: black;
+    background-color: white;
     width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    margin: 0;
+    padding-right: 5px;
 }
 
-.container .card-container .back .box img{
-    margin-top: 30px;
+#cvv>h5 {
+    margin-bottom: 10px;
+}
+
+.cardBack>img {
+    width: 100px;
+    margin-bottom: 20px
+}
+
+.logo-cards {
+    display: flex;
+    justify-content: space-between;
+}
+.logo-cards > div  {
+overflow: hidden;
+    height: 70px;
+    width: 80px;
+}
+.logo-cards > div >div {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+transition: all 0.5s ease-in-out;
+}
+.logo-cards > div > div >img{
+margin-bottom: 40px;
+}
+.card-number {
+    font-size: 1.5rem;
+    letter-spacing: 6px;
+    margin-top: -25px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    letter-spacing: 2px;
+    overflow: hidden;
+}
+
+.marking {
+    border: 1px solid white;
+    padding: 3px;
+    transition: .5s;
+    position: relative;
+    border-radius: 4px;
+}
+
+.holder {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    position: relative;
+}
+
+.expiry {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.card-subtitle {
+    letter-spacing: 3px;
+    font-size: 0.6rem;
+
+}
+
+.card-details {
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    position: sticky;
+}
+
+.card-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 450px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cvv {
+    padding-top: 5px;
+    padding-right: 97px;
+    font-size: 10px;
+}
+
+.form-group {
+    font-size: 12px;
+}
+
+.form-group input,
+.form-group select {
+    width: 430px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+.expiry-group {
+    display: flex;
+    gap: 15px;
+}
+
+.expiry-group select {
+    max-height: 45px;
+    max-width: 40%;
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+.card-cvv {
+    margin-left: 25px;
+    max-width: 100px;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.digit {
+    display: inline-block;
+    width: 20px;
     height: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.digit span {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+#space{
+    width: 10px;
 }

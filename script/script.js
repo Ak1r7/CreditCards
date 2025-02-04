@@ -18,7 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let previousValue = "";
     
     
+<<<<<<< HEAD
         cardNumberInput.addEventListener('input', () => {
+=======
+        cardNumberInput.addEventListener('input',  ev => {
+>>>>>>> d0644a26a8c55c232aaab55b3ca99a4fe944af02
             console.log(digits[0].textContent);
             if (digits[0].textContent !== "#") {
                 switch (digits[0].textContent) {
@@ -125,9 +129,17 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
 
+<<<<<<< HEAD
  function updateExpiryDate () {
         const month = cardExpiryMonth.value === "MM" ? "MM" : cardExpiryMonth.value;
         const year = cardExpiryYear.value === "YY" ? "YY" : cardExpiryYear.value;
         cardExpiry.textContent = `${month}/${year}`;
     } });
  
+=======
+    const updateExpiryDate = ()  => {
+        const month = cardExpiryMonth.value === "MM" ? "MM" : cardExpiryMonth.value;
+        const year = cardExpiryYear.value === "YY" ? "YY" : cardExpiryYear.value;
+        cardExpiry.textContent = `${month}/${year}`;
+    } });
+>>>>>>> d0644a26a8c55c232aaab55b3ca99a4fe944af02
